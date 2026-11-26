@@ -1,0 +1,10 @@
+node_modules/
+dist/
+dist-folder-preview/
+dist-sakura-study/
+versions/
+tmp/
+handbook-extracted.txt
+player-cover-*.json
+*.zip
+.DS_Store
