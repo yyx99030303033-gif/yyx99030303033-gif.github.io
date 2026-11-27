@@ -190,3 +190,121 @@ header .wordmark.hero-wordmark{flex-direction:row;align-items:center;gap:9px;whi
 @media(max-width:650px){#opc .opc-route{grid-template-columns:1fr;padding:8px 17px;margin-top:22px;border-radius:11px}#opc .opc-route-step{align-items:center;padding:12px 0;border-right:0;border-bottom:1px solid #c5acd52e;gap:13px}#opc .opc-route-step:last-child{border-bottom:0}#opc .opc-route-step p{max-width:none;font-size:10px}#opc .opc-route-step h4{font-size:12px;margin:0 0 2px}#opc .opc-route-step:not(:last-child):after{content:'↓';right:4px;top:22px;background:transparent}#opc .orchestration-results h4{font-size:9px}}
 
 #opc .opc-story{display:block}#opc .opc-story>p{max-width:850px}#opc .orchestration-results{display:flex;justify-content:flex-start;align-items:start;gap:48px;margin-top:21px;max-width:none}#opc .orchestration-results h4{font-size:12px;color:#93719f;font-weight:500;line-height:1.6}#opc .orchestration-results strong{font-size:47px;font-weight:750;color:#80539d}#opc .opc-route{margin-top:25px}@media(max-width:650px){#opc .orchestration-results{gap:29px;margin-top:18px}#opc .orchestration-results h4{font-size:10px}#opc .orchestration-results strong{font-size:40px}}
+/* Creative reach and invited industry exchange */
+.impact-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.industry-invitation{display:flex;align-items:center;gap:24px;margin:32px 0;padding:26px 30px;background:linear-gradient(120deg,#f8f3fb,#e9dff080);border:1px solid #bfa1d540;border-radius:18px;color:#584067}.invitation-mark{font-size:45px;color:#a67ac1;flex-shrink:0}.invitation-eyebrow{font-size:10px;letter-spacing:2px;color:#9978ac}.industry-invitation h3{font-size:22px;margin:9px 0 10px}.industry-invitation p{margin:0;font-size:14px;line-height:1.8;color:#887194}.invitation-role{margin-left:auto;white-space:nowrap;border:1px solid #b996cf70;border-radius:99px;padding:8px 14px;font-size:11px;color:#8c64a4}@media(max-width:700px){.impact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.industry-invitation{gap:14px;padding:22px 18px;align-items:flex-start}.invitation-mark{font-size:29px}.industry-invitation h3{font-size:18px}.industry-invitation p{font-size:12px}.invitation-role{display:none}}
+.harness-details{margin:28px 0 38px;border:1px solid #b99fce55;border-radius:18px;background:#f7f2fb70;overflow:hidden}.harness-details summary{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:22px 26px;cursor:pointer;list-style:none;color:#72518a}.harness-details summary::-webkit-details-marker{display:none}.harness-details summary>span{font-size:11px;letter-spacing:1px}.harness-details summary strong{font-size:14px}.harness-details summary i{display:inline-block;font-style:normal;margin-left:18px;transition:transform .3s}.harness-details[open] summary i{transform:rotate(45deg)}.harness-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px 38px;padding:5px 26px 28px;animation:harness-in .35s ease}.harness-detail-grid small{color:#a080b5;font-size:9px;letter-spacing:1px}.harness-detail-grid h4{font-size:18px;color:#624779;margin:10px 0}.harness-detail-grid p{font-size:13px;color:#8d7899;line-height:1.85;margin:0}@keyframes harness-in{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}@media(max-width:700px){.harness-details summary{padding:20px;flex-direction:column;align-items:flex-start;gap:10px}.harness-detail-grid{grid-template-columns:1fr;padding:0 20px 24px;gap:24px}}@media(prefers-reduced-motion:reduce){.harness-detail-grid{animation:none}}
+/* Keep reach metrics readable in resized desktop windows as well as phones. */
+.work-section .impact-grid{container-type:inline-size;gap:24px;grid-template-columns:repeat(4,minmax(0,1fr))}
+.work-section .impact-grid>div{min-width:0;padding-left:18px}
+.work-section .impact-grid strong{font-size:clamp(28px,4.5cqw,68px);letter-spacing:-.045em;white-space:nowrap;line-height:1.15;font-variant-numeric:tabular-nums}
+.work-section .impact-grid span{font-size:clamp(12px,1.3cqw,16px);line-height:1.5}
+@media(max-width:1150px){.work-section .impact-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 22px}.work-section .impact-grid strong{font-size:clamp(30px,7.5cqw,60px)}}
+@media(max-width:480px){.work-section .impact-grid{gap:24px 12px}.work-section .impact-grid>div{padding-left:10px}.work-section .impact-grid strong{font-size:clamp(25px,8cqw,36px)}}
+/* Always-visible execution layer, following the five-stage workflow. */
+.harness-system{margin:34px 0 16px;padding:28px 0 10px;border-top:1px solid #b79bc64d}
+.harness-system-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;margin-bottom:25px}
+.harness-system-heading>div>span{font-size:10px;letter-spacing:2px;color:#a183b1}
+.harness-system-heading h3{font-size:clamp(22px,2.1vw,32px);line-height:1.4;color:#654478;margin:10px 0 0;font-weight:600}
+.harness-system-heading>p{font-size:12px;line-height:1.8;color:#947ba3;margin:0;text-align:right}
+.harness-system .harness-detail-grid{padding:0;gap:16px 20px;animation:none}
+.harness-system .harness-detail-grid article{position:relative;padding:26px 28px 27px 72px;border:1px solid #bba0d033;border-radius:16px;background:linear-gradient(130deg,#faf6fc99,#e8ddef30);transition:border-color .25s,background .25s}
+.harness-system .harness-detail-grid article:before{content:'01';position:absolute;left:23px;top:24px;font-size:21px;font-weight:500;color:#b995cd}
+.harness-system .harness-detail-grid article:nth-child(2):before{content:'02'}
+.harness-system .harness-detail-grid article:nth-child(3):before{content:'03'}
+.harness-system .harness-detail-grid article:nth-child(4):before{content:'04'}
+.harness-system .harness-detail-grid article:hover{border-color:#aa7dc969;background:#faf5fcaa}
+.harness-system .harness-detail-grid small{font-size:9px;letter-spacing:1.2px;color:#a083b2}
+.harness-system .harness-detail-grid h4{font-size:20px;line-height:1.4;margin:10px 0 12px;color:#68457e}
+.harness-system .harness-detail-grid p{font-size:13px;line-height:1.9;color:#8c749b}
+@media(max-width:800px){.harness-system-heading{align-items:flex-start;flex-direction:column;gap:14px}.harness-system-heading>p{text-align:left}.harness-system .harness-detail-grid{grid-template-columns:1fr;gap:12px}.harness-system .harness-detail-grid article{padding:23px 22px 24px 62px}.harness-system .harness-detail-grid article:before{left:19px;top:23px;font-size:19px}.harness-system .harness-detail-grid h4{font-size:18px}.harness-system{margin-top:25px}}
+/* Execution index: editorial rows, without repeated cards. */
+.harness-system .harness-detail-grid{display:block;border-top:1px solid #baa1cb55}
+.harness-system .harness-detail-grid article{display:grid;grid-template-columns:minmax(220px,.8fr) minmax(0,1.45fr);column-gap:50px;row-gap:8px;align-items:start;padding:27px 12px 29px 86px;border:0;border-bottom:1px solid #baa1cb4d;border-radius:0;background:none;transition:background .3s}
+.harness-system .harness-detail-grid article:before{left:8px;top:28px;font-size:35px;line-height:1;color:#bca0cd;font-weight:400;letter-spacing:-2px}
+.harness-system .harness-detail-grid article small{grid-column:1;grid-row:1;font-size:9px;letter-spacing:1.5px;padding-top:1px}
+.harness-system .harness-detail-grid article h4{grid-column:1;grid-row:2;margin:0;font-size:21px}
+.harness-system .harness-detail-grid article p{grid-column:2;grid-row:1 / 3;font-size:14px;line-height:1.9;max-width:760px;margin:0}
+.harness-system .harness-detail-grid article:hover{border-color:#baa1cb4d;background:linear-gradient(90deg,#d6bee71c,transparent)}
+#games .game-title-row h3{flex-basis:100%;margin-bottom:5px}
+#games .game-title-row .design-entry,#games .game-title-row .game-play-link,#games .game-title-row .game-video-link{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;flex:0 0 132px;width:132px;min-width:132px;height:40px;padding:0 12px;font-family:inherit;font-size:12px;font-weight:600;line-height:1;gap:8px;white-space:nowrap;border-radius:24px;border-width:1px}
+@media(max-width:800px){.harness-system .harness-detail-grid article{grid-template-columns:1fr;gap:10px;padding:24px 8px 25px 58px}.harness-system .harness-detail-grid article:before{font-size:27px;top:26px;left:3px}.harness-system .harness-detail-grid article small{grid-column:1;grid-row:1}.harness-system .harness-detail-grid article h4{grid-column:1;grid-row:2;font-size:19px}.harness-system .harness-detail-grid article p{grid-column:1;grid-row:3;font-size:13px}}
+@media(max-width:700px){#games .game-title-row .design-entry,#games .game-title-row .game-play-link,#games .game-title-row .game-video-link{flex-basis:124px;width:124px;min-width:124px;height:38px;font-size:11px;padding:0 10px}}
+/* Compact case study: outcome first, mechanisms as a supporting index. */
+#opc>.section-heading{margin-bottom:24px}
+#opc .opc-story>.opc-kicker{font-size:9px;letter-spacing:1.7px}
+#opc .opc-story>h3{font-size:clamp(21px,2vw,29px);margin:9px 0 10px}
+#opc .opc-story>p{max-width:1050px;font-size:13px;line-height:1.8;margin:0}
+#opc .orchestration-results{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:24px;padding:23px 0;border-top:1px solid #b99bcc5c;border-bottom:1px solid #b99bcc5c;background:linear-gradient(100deg,#d4b9e71c,transparent)}
+#opc .orchestration-results>div{display:grid;grid-template-columns:auto 1fr;column-gap:24px;row-gap:5px;align-items:center;padding:0 24px}
+#opc .orchestration-results>div+div{border-left:1px solid #b99bcc5c}
+#opc .orchestration-results strong{grid-column:1;grid-row:1/3;font-size:clamp(44px,4.5vw,70px);line-height:1.1;letter-spacing:-3px}
+#opc .orchestration-results h4{grid-column:2;grid-row:1;margin:0;align-self:end;font-size:13px;font-weight:600;color:#74528b}
+#opc .orchestration-results p{grid-column:2;grid-row:2;font-size:11px;line-height:1.7;color:#a084b0;margin:0;align-self:start}
+#opc .harness-system{margin-top:22px;padding-top:0;border-top:0}
+#opc .harness-system-heading{margin-bottom:16px}
+#opc .harness-system-heading h3{font-size:20px;margin-top:7px}
+#opc .harness-system .harness-detail-grid article{padding-top:19px;padding-bottom:19px;padding-left:65px;column-gap:30px;grid-template-columns:minmax(220px,.75fr) minmax(0,1.5fr)}
+#opc .harness-system .harness-detail-grid article:before{font-size:25px;top:23px}
+#opc .harness-system .harness-detail-grid article h4{font-size:17px}
+#opc .harness-system .harness-detail-grid article p{font-size:12px;line-height:1.85}
+#opc .industrial-heading.orchestration-applications{margin-top:26px;padding-top:0}
+#games .game-title-row{flex-wrap:nowrap;gap:7px}
+#games .game-title-row h3{flex:1 1 auto;min-width:0;margin:0 6px 0 0;font-size:18px;line-height:1.4}
+#games .game-title-row .design-entry,#games .game-title-row .game-play-link,#games .game-title-row .game-video-link{flex:0 0 104px;width:104px;min-width:104px;height:36px;font-size:11px;padding:0 8px;gap:5px}
+@media(max-width:1100px){#games .game-title-row .design-entry,#games .game-title-row .game-play-link,#games .game-title-row .game-video-link{flex-basis:90px;width:90px;min-width:90px;font-size:10px;gap:4px;padding:0 6px}#games .game-title-row h3{font-size:16px}}
+@media(max-width:800px){#opc .orchestration-results>div{display:flex;flex-direction:column;align-items:flex-start;padding:0 16px;gap:6px}#opc .orchestration-results strong{font-size:46px}#opc .orchestration-results h4{align-self:auto;font-size:11px}#opc .orchestration-results p{align-self:auto;font-size:10px}#opc .harness-system .harness-detail-grid article{grid-template-columns:1fr;padding-left:48px}#opc .harness-system .harness-detail-grid article:before{font-size:23px;left:0}#opc .harness-system-heading>p{display:none}}
+@media(max-width:540px){#games .game-title-row{flex-wrap:wrap}#games .game-title-row h3{flex-basis:100%;margin-bottom:4px}#games .game-title-row .design-entry,#games .game-title-row .game-play-link,#games .game-title-row .game-video-link{flex-basis:96px;width:96px;min-width:96px;height:35px}}
+/* Editorial motion: typography, outcomes and execution rows share one rhythm. */
+.editorial-stage{opacity:0;transform:translate3d(0,22px,0);transition:opacity .65s ease,transform .8s cubic-bezier(.16,1,.3,1);transition-delay:var(--stage-delay,0ms)}
+.editorial-stage.editorial-visible{opacity:1;transform:translateZ(0)}
+.kinetic-heading.editorial-stage{transform:none;opacity:1;transition:none}
+.kinetic-glyph{display:inline-block;opacity:0;transform:translate3d(0,70%,0) rotate(3deg);transition:transform .75s cubic-bezier(.16,1,.3,1),opacity .55s ease;transition-delay:var(--glyph-delay);white-space:pre}
+.editorial-visible .kinetic-glyph{opacity:1;transform:translateZ(0) rotate(0)}
+.harness-system .harness-detail-grid article{isolation:isolate}
+.harness-system .harness-detail-grid article:after{content:'';position:absolute;left:0;right:0;bottom:-1px;height:1px;background:linear-gradient(90deg,#a379bd,#d7b4ee,transparent);transform:scaleX(0);transform-origin:left;transition:transform 1.1s cubic-bezier(.22,1,.36,1) var(--stage-delay,0ms);pointer-events:none}
+.harness-system .harness-detail-grid article.editorial-visible:after{transform:scaleX(1)}
+.harness-system .harness-detail-grid article:before{transition:color .3s,text-shadow .3s}
+.harness-system .harness-detail-grid article:hover:before{color:#9260b2;text-shadow:0 0 22px #b588d666}
+.industry-invitation{position:relative;overflow:hidden}
+.industry-invitation:after{content:'';position:absolute;inset:-60% -30%;background:linear-gradient(110deg,transparent 35%,#ffffff8c 49%,transparent 63%);transform:translateX(-110%) rotate(-8deg);pointer-events:none}
+.industry-invitation.editorial-visible:after{animation:invitation-pass 1.5s .2s both}
+@keyframes invitation-pass{to{transform:translateX(110%) rotate(-8deg)}}
+.orchestration-results.editorial-visible strong{animation:outcome-settle .85s cubic-bezier(.16,1,.3,1) both}
+@keyframes outcome-settle{from{opacity:.25;transform:translateY(15px) scale(.96)}to{opacity:1;transform:none}}
+.reading-progress{box-shadow:0 0 14px #b389d580}
+@media(max-width:700px){.editorial-stage{transform:translate3d(0,14px,0)}.kinetic-glyph{transition-duration:.6s}}
+@media(prefers-reduced-motion:reduce){.editorial-stage,.kinetic-glyph{opacity:1!important;transform:none!important;transition:none!important}.industry-invitation:after{display:none}.harness-system .harness-detail-grid article:after{transform:scaleX(1);transition:none}.orchestration-results.editorial-visible strong{animation:none}}
+/* Image depth and a local pearl highlight; transforms are isolated from card dragging. */
+.fan-card img{transition:transform .55s cubic-bezier(.16,1,.3,1);transform-origin:center;backface-visibility:hidden}
+.fan-stage:after{content:'';position:absolute;inset:3% 2%;z-index:22;border-radius:12px;background:radial-gradient(circle at var(--spot-x,50%) var(--spot-y,50%),#f0d9ff45,transparent 46%);opacity:var(--light-opacity,0);transition:opacity .35s;pointer-events:none}
+.gallery-echo{position:absolute;inset:3% 4% 3% 2%;width:94%;height:91%;object-fit:cover;border-radius:12px;z-index:21;pointer-events:none;animation:gallery-trail .48s ease-out both;opacity:0}
+@keyframes gallery-trail{0%{opacity:.35;transform:translateX(0) scale(1)}100%{opacity:0;transform:translateX(-24px) scale(.98)}}
+.design-entry,.game-play-link,.game-video-link,.design-action{position:relative;overflow:hidden;transition:translate .2s ease-out,background .25s,box-shadow .25s}
+.click-bloom{position:absolute;width:12px;height:12px;pointer-events:none;border-radius:50%;background:radial-gradient(circle,#fbf3ffb3,#cca1ee7a 45%,transparent 72%);transform:translate(-50%,-50%);animation:click-bloom .6s ease-out both}
+@keyframes click-bloom{from{opacity:1;scale:.5}to{opacity:0;scale:23}}
+.chapter-effect{position:relative;isolation:isolate;overflow:clip}
+.chapter-effect:before{content:'';position:absolute;z-index:-1;left:-30%;top:0;width:75%;height:320px;pointer-events:none;background:linear-gradient(115deg,transparent 28%,#b985d61c 44%,#f5e5ff70 50%,#c19adc21 56%,transparent 74%);opacity:0;transform:translateX(-60%)}
+.chapter-effect.chapter-lit:before{animation:chapter-pass 1.7s cubic-bezier(.22,1,.36,1) both}
+@keyframes chapter-pass{0%{opacity:0;transform:translateX(-60%)}20%{opacity:1}100%{opacity:0;transform:translateX(185%)}}
+.reading-focus{opacity:.65;transition:opacity .65s ease,color .65s}
+.reading-focus.reading-focused{opacity:1}
+.reading-focus strong{transition:color .5s}.reading-focus.reading-focused strong{color:#77528d}
+.design-enter-active .design-dialog{animation-name:project-expand;animation-duration:.65s;will-change:transform,opacity}
+@keyframes project-expand{from{opacity:0;transform:scale(.28) rotateX(5deg)}to{opacity:1;transform:none}}
+.design-leave-active .design-dialog{transform-origin:var(--origin,50% 55%)}
+@media(hover:none){.fan-card img{transform:none!important}.fan-stage:after{display:none}.design-entry,.game-play-link,.game-video-link,.design-action{translate:none!important}}
+@media(prefers-reduced-motion:reduce){.gallery-echo,.chapter-effect:before,.click-bloom,.fan-stage:after{display:none!important}.fan-card img{transform:none!important;transition:none!important}.reading-focus{opacity:1!important;transition:none!important}.design-entry,.game-play-link,.game-video-link,.design-action{translate:none!important}.design-enter-active .design-dialog{animation:none!important}}
+/* Headings must remain readable even before their viewport animation fires. */
+.kinetic-glyph{opacity:1;transform:none;transition:none}
+.editorial-visible .kinetic-glyph{animation:readable-title-in .65s cubic-bezier(.16,1,.3,1) both;animation-delay:var(--glyph-delay,0ms)}
+@keyframes readable-title-in{from{opacity:.25;transform:translate3d(0,18px,0)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.editorial-visible .kinetic-glyph{animation:none!important}}
+/* Split glyphs cannot inherit a parent's background-clipped transparent text. */
+#games .section-heading h2{background:none;background-clip:border-box;-webkit-background-clip:border-box;color:#edddf6;-webkit-text-fill-color:currentColor}
+#games .section-heading h2 .kinetic-glyph{color:inherit;-webkit-text-fill-color:currentColor}
+#games .section-heading h2 .orange{color:#d3a1f9;-webkit-text-fill-color:currentColor}
+/* Avoid rasterizing entire image stacks during scroll entrance; keep pointer interactions. */
+#games .project.motion-reveal{opacity:1;filter:none;transform:none;transition:border-color .25s,box-shadow .25s}
+#games .fan-stage{contain:layout paint}
+#games .fan-card{background:#221c2b}

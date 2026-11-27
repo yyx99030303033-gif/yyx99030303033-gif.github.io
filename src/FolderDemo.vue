@@ -7,7 +7,9 @@ import {profile,games,creativeWorks,creatureWorks} from './content.js'
 const props=defineProps({embedded:Boolean})
 const emit=defineEmits(['done','select-work'])
 const phase=ref('closed')
-function finish(){phase.value='home';emit('done')}
+const ambientReady=ref(false)
+let ambientTimer
+function finish(){phase.value='home';emit('done');clearTimeout(ambientTimer);ambientTimer=setTimeout(()=>ambientReady.value=true,750)}
 const projects=[...creativeWorks.map(p=>({...p,href:'/#creative'})),...games.filter(p=>p.cover).map(p=>({...p,href:`/#game-${games.indexOf(p)}`})),...creatureWorks.map(p=>({...p,href:'/#creative'}))]
 const cards=[],galleries=projects.map(p=>(p.images||p.gallery||[{src:p.cover}]).map(image=>({title:p.title,src:image.src,href:p.href})))
 for(let row=0;row<Math.max(...galleries.map(g=>g.length));row++)galleries.forEach(g=>{if(g[row])cards.push(g[row])})
@@ -25,7 +27,7 @@ function run(now){
  else {finish();return}
  raf=requestAnimationFrame(run)
 }
-function replay(){cancelAnimationFrame(raf);phase.value='closed';started=0;raf=requestAnimationFrame(run)}
+function replay(){ambientReady.value=false;clearTimeout(ambientTimer);cancelAnimationFrame(raf);phase.value='closed';started=0;raf=requestAnimationFrame(run)}
 function skip(){userSkipped=true;cancelAnimationFrame(raf);finish()}
 onMounted(async()=>{
  await Promise.all(deck.map(card=>new Promise(resolve=>{const img=new Image();img.onload=()=>{img.decode().catch(()=>{}).then(resolve)};img.onerror=resolve;img.src=card.src})))
@@ -35,11 +37,11 @@ onMounted(async()=>{
   replay()
  }
 })
-onBeforeUnmount(()=>{disposed=true;cancelAnimationFrame(raf)})
+onBeforeUnmount(()=>{clearTimeout(ambientTimer);disposed=true;cancelAnimationFrame(raf)})
 </script>
 <template>
  <section class="folder-demo" :class="[phase,{embedded}]" aria-label="创作档案首页">
-  <HeroAtmosphere :animated="phase==='home'"/>
+  <HeroAtmosphere :animated="ambientReady"/>
   <header v-if="!embedded"><a href="/">BUILD <span>✳</span> FUN</a><span class="demo-caption">CREATIVE ARCHIVE / 2026</span><button v-if="phase!=='home'" @click="skip">跳过开场 ↗</button><button v-else @click="replay">重播 ↺</button></header>
   <div class="intro-caption" :aria-hidden="phase==='home'"><span>IDEAS INTO PLAYABLE THINGS</span><p class="intro-title">每个想法，都有一个世界。</p></div>
   <div class="folder-position"><div class="folder-object">
@@ -49,7 +51,7 @@ onBeforeUnmount(()=>{disposed=true;cancelAnimationFrame(raf)})
    <div class="folder-front"><span class="glass-sheen"></span><span class="folder-label"><img class="folder-wordmark" src="/images/branding/build-fun-wordmark.png" alt="Build Fun"><small>CREATIVE ARCHIVE / 杨缘馨</small></span><span class="folder-star">✧</span><span class="folder-count">{{String(cards.length).padStart(2,'0')}} FRAMES / {{deck.length}} WORLDS</span></div>
   </div></div>
   
-  <section id="about" class="landing-copy" :inert="phase!=='home'"><HeroProfile v-if="phase==='home'" /></section>
+  <section id="about" class="landing-copy" :inert="phase!=='home'"><HeroProfile /></section>
   <footer v-if="!embedded"><span>AI CODING · GAME PROTOTYPING · CREATIVE DEVELOPMENT</span><a href="/">返回当前网站 ↗</a></footer>
  </section>
 </template>
@@ -108,4 +110,35 @@ header{height:84px;display:flex;align-items:center;justify-content:space-between
 .folder-reveal-aura{position:absolute;inset:-25%;z-index:-1;border-radius:50%;background:radial-gradient(ellipse,#f8f0ff00 30%,#e3c8f25c 50%,#cba5df24 61%,transparent 74%);opacity:0;pointer-events:none}.catching .folder-reveal-aura{animation:folder-aura-reveal 1.2s .12s both}.home .folder-reveal-aura{opacity:.5;transform:scale(1.08)}.folder-front:after{content:'';position:absolute;inset:7px;border:1px solid #fffffc36;border-radius:16px;pointer-events:none}.folder-back{box-shadow:inset 0 1px 16px #fffb,0 13px 40px #a282bb25}.home .folder-front{box-shadow:inset 0 0 25px #fff9,0 15px 30px #88619c20}.folder-front .glass-sheen{background:linear-gradient(115deg,transparent 25%,#fff8 46%,#e9d4f62b 52%,transparent 72%)}@keyframes folder-aura-reveal{0%{opacity:0;transform:scale(.7)}45%{opacity:.85}100%{opacity:.5;transform:scale(1.08)}}@media(prefers-reduced-motion:reduce){.folder-reveal-aura{animation:none!important}}
 .closed :deep(.hero-atmosphere *),.catching :deep(.hero-atmosphere *){animation-play-state:paused!important}.archive-card{will-change:transform}.catching .archive-card{box-shadow:0 4px 12px #79609220}.home .folder-label strong{animation:none}.home .folder-front .glass-sheen{animation-duration:9s}
 .folder-label{width:69%;bottom:27%;gap:5px}.folder-label .folder-wordmark{display:block;width:100%;height:auto;max-width:none;aspect-ratio:3/1;object-fit:contain;pointer-events:none}.folder-label small{padding-left:4px}.home .folder-object:focus-within:not(:hover) .archive-card{transform:translate(var(--x),20%) rotate(var(--r))}.home .folder-object .archive-card:focus:not(:hover){z-index:var(--i)}@media(max-width:800px){.folder-label{bottom:26%;gap:4px}}
+/* Mobile: center the archive in the first viewport; biography follows below. */
+@media(max-width:800px){
+ .folder-demo.embedded{height:auto;min-height:calc(100svh - 70px + 690px)}
+ .folder-demo.embedded .folder-position,
+ .folder-demo.embedded.home .folder-position{left:50%;top:calc((100svh - 70px) / 2);width:min(74vw,380px);transform:translate(-50%,-50%)}
+ .folder-demo.embedded #about.landing-copy{top:calc(100svh - 70px + 24px);left:8%;right:8%;transform:none}
+ .folder-demo.embedded.home #about.landing-copy{transform:none}
+}
+.folder-front,.closed .folder-front,.catching .folder-front,.home .folder-front{will-change:transform;backface-visibility:hidden;transition:transform .6s cubic-bezier(.22,1,.36,1);box-shadow:inset 0 1px 8px #fff7,0 10px 22px #88619c20}
+.inner-sheet,.home .inner-sheet{transition:none;background:linear-gradient(180deg,#ffffff24,#b49ac525);box-shadow:none}
+@media(max-width:800px){.folder-position{transition:opacity .3s}.folder-object{transition:transform .6s cubic-bezier(.22,1,.36,1)}.archive-card,.closed .archive-card,.catching .archive-card{box-shadow:0 3px 8px #79609220}}
+/* Mobile resting layout: compact archive above the biography. */
+@media(max-width:800px){
+ .folder-demo.embedded{min-height:calc(100svh - 70px);padding-bottom:38px}
+ .folder-demo.embedded.home{min-height:0}
+ .folder-demo.embedded .folder-position{transition:top .75s cubic-bezier(.22,1,.36,1),opacity .3s}
+ .folder-demo.embedded.home .folder-position{top:175px;width:min(74vw,380px)}
+ .folder-demo.embedded #about.landing-copy{position:relative;top:auto;left:auto;right:auto;width:84%;margin:345px auto 0;max-width:none;transform:none;padding-bottom:0}
+ .folder-demo.embedded.home #about.landing-copy{transform:none}
+}
+@media(max-width:380px){.folder-demo.embedded.home .folder-position{top:155px}.folder-demo.embedded #about.landing-copy{margin-top:310px}}
+@media(prefers-reduced-motion:reduce){.folder-demo.embedded .folder-position{transition:none}}
+@media(min-width:801px){
+ .folder-demo.embedded .folder-position,.folder-demo.embedded.home .folder-position{left:50%;top:58%;width:min(470px,37vw);transition:transform .75s cubic-bezier(.22,1,.36,1);will-change:transform}
+ .folder-demo.embedded .folder-position{transform:translate3d(-50%,-50%,0)}
+ .folder-demo.embedded.home .folder-position{transform:translate3d(calc(-50% - 24vw),calc(-50% - 35px),0)}
+}
 </style>
+
+
+
+

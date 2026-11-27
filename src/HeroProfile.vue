@@ -5,7 +5,7 @@ import {profile} from './content.js'
 <div class="profile-intro">
  <div class="profile-eyebrow"><span class="profile-spark">✳</span> 关于我 <i></i> IDEAS INTO EXPERIENCES</div>
  <div class="profile-name-row"><h1>杨缘馨<span>。</span></h1><span class="profile-seal" aria-hidden="true">CODE<br>× PLAY</span></div>
- <p class="profile-experience"><strong>5.5<span> 年</span></strong><span>软件开发<br>与项目交付经验</span></p>
+ <p class="profile-experience"><strong>6<span> 年</span></strong><span>软件开发<br>与项目交付经验</span></p>
  <p class="profile-manifesto">认真创造，<em>保持好玩。</em><svg viewBox="0 0 180 12" aria-hidden="true"><path d="M3 8Q87 -2 176 6"/></svg></p>
  <p class="profile-summary">从业务系统到可体验的创意作品，<br>用工程经验打底，用 AI 拓展创作边界。</p>
  <div class="profile-strengths">

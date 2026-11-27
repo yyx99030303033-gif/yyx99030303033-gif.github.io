@@ -1,24 +1,184 @@
 // 个人资料与作品内容集中维护；空链接保持待补充状态。
 export const profile = {
-  name: '杨缘馨', role: 'AI Builder / AI 创意开发', city: '北京',
+  name: '杨缘馨', role: 'AI 应用开发工程师', city: '北京',
   tagline: 'AI Coding · Game Prototyping · Agentic Workflow · Creative Development',
   introduction: [
     '热爱游戏与创意开发，擅长结合 AI Coding 与软件工程能力，将玩法构思、视觉创意及复杂业务需求转化为可运行的交互原型。',
     '独立完成多个不同风格的游戏 Demo 与三维创意作品，主导搭建 多 Agent 协作任务编排器，具备 AI 协作开发、Agentic Workflow 设计及 Skills 能力复用实践。',
-    '拥有五年半相关软件开发经验，具备从需求分析、技术实现到项目交付的完整工程能力。',
+    '拥有六年相关软件开发经验，具备从需求分析、技术实现到项目交付的完整工程能力。',
   ],
-  email: 'yyx99333333@163.com', resumeUrl: '', githubUrl: '',
+  email: 'yyx99333333@163.com', resumeUrl: '/resume/yang-yuanxin-resume.pdf', githubUrl: '',
   socials: [
     { label: '小红书', url: 'https://www.xiaohongshu.com/user/profile/659cfc4a00000000220172dc' },
     { label: '抖音', url: 'https://v.douyin.com/s065aETs_2c/' },
   ],
 }
-export const impact = [ { value: '5,000+', label: '新增粉丝' }, { value: '40,685', label: '作品获赞' }, { value: '3,500+', label: 'Prompt 转发量' } ]
+export const impact = [ { value: '6,000+', label: '新增粉丝' }, { value: '41,685', label: '作品获赞' }, { value: '800,000+', label: '作品播放量' }, { value: '3,500+', label: 'Prompt 转发量' } ]
 export const games = [
-  { title: 'VELORA — 3D 城市驾驶', type: '3D DRIVING / AI CODING / STYLIZED ENVIRONMENT', description: '以雨夜霓虹都市为背景的三维驾驶游戏原型，实现车辆驾驶、氮气加速、动态镜头跟随及车库车漆颜色更换。通过 AI Coding 完成城市场景构建、车辆交互及视觉效果迭代，探索驾驶体验与沉浸式场景氛围的结合。', visual: 'city', tags: ['3D 驾驶', 'AI Coding', '风格化场景'], cover: '/images/velora/cover-clean.png', gallery: [{src:'/images/velora/cover-clean.png',label:'宣传封面'}, {src:'/images/velora/driving.png',label:'实机 · 雨夜城市驾驶'}, {src:'/images/velora/nitro.png',label:'实机 · 氮气加速'}, {src:'/images/velora/character.png',label:'实机 · 角色与车辆'}, {src:'/images/velora/paint.png',label:'实机 · 车漆工坊'}], videoUrl: 'https://www.xiaohongshu.com/discovery/item/6b03f523000000002500b467?source=webshare&xhsshare=pc_web&xsec_token=ABw15fj_XWOh4pFUskE073FlWVuIO63wMOpUThRS2dc_k=&xsec_source=pc_share', playUrl: 'https://neta.art/w/yyx99030303033/pelican-coast/velora-rain-night' },
-  { title: '食堂打饭模拟', type: 'PIXEL ART / CASUAL GAME / SIMULATION', description: '以日常食堂打饭为灵感的像素风休闲模拟游戏。玩家扮演食堂阿姨，体验餐食打取及特色「抖勺」交互。将具有生活共鸣的趣味现象转化为轻量游戏机制，探索生活化题材与休闲游戏玩法的结合。', visual: 'pixel', tags: ['像素风', '休闲游戏', '模拟'], cover: '/images/canteen/cover.png', gallery: [{src:'/images/canteen/cover.png',label:'宣传封面'},{src:'/images/canteen/tutorial.png',label:'实机 · 新手练习与抖勺'},{src:'/images/canteen/rush-hour.png',label:'实机 · 晚高峰打饭'},{src:'/images/canteen/kebab.png',label:'实机 · 土耳其烤肉饭'},{src:'/images/canteen/burger.png',label:'实机 · 汉堡档'}], videoUrl: '', playUrl: 'https://neta.art/w/yyx99030303033/pelican-coast/third-canteen' },
-  { title: '分羊羊', type: 'COZY GAME / CASUAL ARCADE / 3D', description: '治愈系卡通 3D 休闲游戏，玩家需要将大羊、小羊送入对应羊圈，随着游戏节奏逐渐加快，形成持续性的反应挑战。作品已获得真实用户试玩反馈，并围绕玩法重复性、内容丰富度及持续游玩体验进行后续设计思考。', visual: 'anime', tags: ['治愈系', '休闲街机', '3D'], cover: '/images/sheep/cover-v1.png', gallery: [{src:'/images/sheep/cover-v1.png',label:'宣传封面'},{src:'/images/sheep/sorting.png',label:'实机 · 大小羊分流'},{src:'/images/sheep/costume.png',label:'实机 · 趣味装扮'},{src:'/images/sheep/peacock.png',label:'实机 · 孔雀装扮羊'},{src:'/images/sheep/collection.png',label:'实机 · 羊的图鉴'},{src:'/images/sheep/tutorial.png',label:'实机 · 新手引导'},{src:'/images/sheep/wolf.png',label:'实机 · 披羊皮的狼'},{src:'/images/sheep/dog.png',label:'实机 · 牧羊犬帮忙'}], videoUrl: '', playUrl: 'https://neta.art/w/yyx99030303033/pelican-coast/sheep-gate' },
-  { title: '风眠花庭', type: '2D / WALKING EXPERIENCE', description: '以森林与花庭为背景的治愈系 2D 散步小游戏。玩家提灯漫步于紫藤花径与林间，体验跳跃、场景互动与「风的信物」收集，在轻量探索中感受自然氛围。', visual: 'garden', tags: ['平面 2D', '散步式体验'], cover: '/images/whispering-woods/panorama.png', gallery: [{src:'/images/whispering-woods/panorama.png',label:'场景展示拼图'}, {src:'/images/whispering-woods/title.png',label:'游戏首页'}, {src:'/images/whispering-woods/courtyard.png',label:'实机 · 花庭漫步'}, {src:'/images/whispering-woods/jump.png',label:'实机 · 蘑菇送风'}, {src:'/images/whispering-woods/detail.png',label:'实机 · 角色与场景细节'}, {src:'/images/whispering-woods/flowers.png',label:'实机 · 紫藤花径'}, {src:'/images/whispering-woods/forest.png',label:'实机 · 林间探索'}], videoUrl: 'https://v.douyin.com/_OLuwlpOzMY/', playUrl: '' },
+  {
+    "title": "VELORA — 雨夜粉紫超跑",
+    "sourceUrl": "https://github.com/yyx99030303033-gif/velora-rain-night",
+    "type": "3D DRIVING / AI CODING / STYLIZED ENVIRONMENT",
+    "description": "以雨夜街区建立驾驶氛围，用霓虹灯光、湿路反射、车身高光和跟随镜头塑造速度与空间感。基于既有技术项目二次开发，串联步行、上下车、导航送车与车漆工坊，探索驾驶之外的街区活动与个性化表达。",
+    "visual": "city",
+    "tags": [
+      "3D 驾驶",
+      "AI Coding",
+      "风格化场景"
+    ],
+    "cover": "/images/velora/cover-clean.png",
+    "gallery": [
+      {
+        "src": "/images/velora/cover-clean.png",
+        "label": "宣传封面"
+      },
+      {
+        "src": "/images/velora/driving.png",
+        "label": "实机 · 雨夜城市驾驶"
+      },
+      {
+        "src": "/images/velora/nitro.png",
+        "label": "实机 · 氮气加速"
+      },
+      {
+        "src": "/images/velora/character.png",
+        "label": "实机 · 角色与车辆"
+      },
+      {
+        "src": "/images/velora/paint.png",
+        "label": "实机 · 车漆工坊"
+      }
+    ],
+    "videoUrl": "https://www.xiaohongshu.com/discovery/item/6b03f523000000002500b467?source=webshare&xhsshare=pc_web&xsec_token=ABw15fj_XWOh4pFUskE073FlWVuIO63wMOpUThRS2dc_k=&xsec_source=pc_share",
+    "playUrl": "https://neta.art/w/yyx99030303033/pelican-coast/velora-rain-night"
+  },
+  {
+    "title": "分羊羊",
+    "type": "COZY GAME / CASUAL ARCADE / 3D",
+    "description": "用一扇门判断羊的去向：大羊关门进圈，小羊开门放行。通过波次、连击、特殊羊与剪毛日规则反转，让简单操作产生持续变化；三颗心用完结算，金币、图鉴和牧场装扮承接局外成长。",
+    "visual": "anime",
+    "tags": [
+      "无尽挑战",
+      "识别与分流",
+      "节奏设计"
+    ],
+    "cover": "/images/sheep/cover-v1.png",
+    "gallery": [
+      {
+        "src": "/images/sheep/cover-v1.png",
+        "label": "宣传封面"
+      },
+      {
+        "src": "/images/sheep/sorting.png",
+        "label": "实机 · 大小羊分流"
+      },
+      {
+        "src": "/images/sheep/costume.png",
+        "label": "实机 · 趣味装扮"
+      },
+      {
+        "src": "/images/sheep/peacock.png",
+        "label": "实机 · 孔雀装扮羊"
+      },
+      {
+        "src": "/images/sheep/collection.png",
+        "label": "实机 · 羊的图鉴"
+      },
+      {
+        "src": "/images/sheep/tutorial.png",
+        "label": "实机 · 新手引导"
+      },
+      {
+        "src": "/images/sheep/wolf.png",
+        "label": "实机 · 披羊皮的狼"
+      },
+      {
+        "src": "/images/sheep/dog.png",
+        "label": "实机 · 牧羊犬帮忙"
+      }
+    ],
+    "videoUrl": "",
+    "playUrl": "https://neta.art/w/yyx99030303033/pelican-coast/sheep-gate"
+  },
+  {
+    "title": "第三食堂",
+    "type": "PIXEL ART / CASUAL GAME / SIMULATION",
+    "description": "从大学食堂的抖勺提取分量判断，让玩家在饭量、耐心、服务顺序和备料之间取舍。四关逐步引入打菜、顾客高峰、烤肉与汉堡工序，通过主动减量、配料纠错和连贯结算反馈，探索忙碌感与低挫败体验的平衡。",
+    "visual": "pixel",
+    "tags": [
+      "像素风",
+      "休闲游戏",
+      "模拟"
+    ],
+    "cover": "/images/canteen/cover.png",
+    "gallery": [
+      {
+        "src": "/images/canteen/cover.png",
+        "label": "宣传封面"
+      },
+      {
+        "src": "/images/canteen/tutorial.png",
+        "label": "实机 · 新手练习与抖勺"
+      },
+      {
+        "src": "/images/canteen/rush-hour.png",
+        "label": "实机 · 晚高峰打饭"
+      },
+      {
+        "src": "/images/canteen/kebab.png",
+        "label": "实机 · 土耳其烤肉饭"
+      },
+      {
+        "src": "/images/canteen/burger.png",
+        "label": "实机 · 汉堡档"
+      }
+    ],
+    "videoUrl": "",
+    "playUrl": "https://neta.art/w/yyx99030303033/pelican-coast/third-canteen"
+  },
+  {
+    "title": "风眠花庭",
+    "type": "2D / WALKING EXPERIENCE",
+    "description": "希望玩家能走进一幅绘本：以五枚信物、森林到花庭的揭景及亭子亮灯组织旅程，不设倒计时和死亡惩罚。用分层纸片角色、前后景遮挡、视差植物与轻盈动作建立空间感，让好奇、发现与停留成为游戏体验。",
+    "visual": "garden",
+    "tags": [
+      "平面 2D",
+      "散步式体验"
+    ],
+    "cover": "/images/whispering-woods/panorama.png",
+    "gallery": [
+      {
+        "src": "/images/whispering-woods/panorama.png",
+        "label": "场景展示拼图"
+      },
+      {
+        "src": "/images/whispering-woods/title.png",
+        "label": "游戏首页"
+      },
+      {
+        "src": "/images/whispering-woods/courtyard.png",
+        "label": "实机 · 花庭漫步"
+      },
+      {
+        "src": "/images/whispering-woods/jump.png",
+        "label": "实机 · 蘑菇送风"
+      },
+      {
+        "src": "/images/whispering-woods/detail.png",
+        "label": "实机 · 角色与场景细节"
+      },
+      {
+        "src": "/images/whispering-woods/flowers.png",
+        "label": "实机 · 紫藤花径"
+      },
+      {
+        "src": "/images/whispering-woods/forest.png",
+        "label": "实机 · 林间探索"
+      }
+    ],
+    "videoUrl": "https://v.douyin.com/_OLuwlpOzMY/",
+    "playUrl": ""
+  }
 ]
 export const creativeWorks = [
   { title: '悉尼蓝花楹', description: '以悉尼蓝花楹街角为主题的三维微缩景观，将奶油色转角建筑、紫色花树、长椅与街边陈设融入同一场景，探索日夜光照下的色彩层次与空间氛围。', displayUrl: 'https://v.douyin.com/MBeYNPJtVAY/', displayLabel: '看抖音视频', images: [{src:'/images/sydney-jacaranda/night-overview.png',label:'夜景全貌'}, {src:'/images/sydney-jacaranda/warm-daylight.png',label:'暖光街角'}, {src:'/images/sydney-jacaranda/daylight.png',label:'日景全貌'}, {src:'/images/sydney-jacaranda/harbour.png',label:'海港画面'}, {src:'/images/sydney-jacaranda/bench.png',label:'街角长椅与陈设'}] },
@@ -32,7 +192,7 @@ export const creativeWorks = [
 export const workflow = [
   { title: 'AI Coding / 研发实践', label: 'BUILD & ITERATE', text: '以 Codex 为主要开发工具，结合 Claude Code 等工具完成需求拆解、代码实现、调试与迭代。独立制作不同风格的游戏 Demo、三维场景与交互作品，将 AI 生成结果整合到实际工程中，持续验证功能、交互与视觉表现。', evidence: '实践：游戏 Demo · 三维交互 · 工业数字孪生' },
   { title: '上下文工程', label: 'CONTEXT ENGINEERING', text: '围绕开发任务组织项目背景、参考素材、技术约束与验收要求，通过提示词和项目规则传递目标。在持续迭代与阶段交接中补充有效信息，延续已确认的设计与实现方向，让 AI 协作围绕具体项目推进。', evidence: '实践：项目规则 · 参考资料 · 阶段交接' },
-  { title: 'Agentic Workflow', label: 'MULTI-AGENT ORCHESTRATION', text: '主导搭建多 Agent 协作任务编排器，将需求分析、架构设计、开发执行、自检与验收组织为多阶段工作流。应用于公司工业数字孪生项目，围绕场景搭建、设备动画与业务流程实现，持续优化任务分工、交接与结果验收。', evidence: '实践：多阶段编排 · 公司项目应用 · 交付验收' },
+  { title: 'Agentic Workflow', label: 'MULTI-AGENT ORCHESTRATION', text: '主导搭建 Agentic Workflow 与 Agent Harness，将需求分析、架构设计、开发执行、自检与验收组织为多阶段工作流。应用于公司工业数字孪生项目，围绕场景搭建、设备动画与业务流程实现，持续优化任务分工、交接与结果验收。', evidence: '实践：多阶段编排 · 公司项目应用 · 交付验收' },
   { title: 'Skills 设计与能力复用', label: 'SKILL DESIGN & REUSE', text: '围绕三维场景开发，将树木生成方法、场景构建规范与视觉质量要求沉淀为可复用 Skills，组织 AI 执行任务所需的方法与约束。探索画笔式批量生成与单棵树木调整，在不同场景中复用既有制作经验，减少重复描述与重复开发。', evidence: '实践：生成方法封装 · 场景规范 · 跨场景复用' },
   { title: 'MCP 工具集成', label: 'TOOL USE & MCP', text: '使用 MCP 将 AI 与外部工具连接，结合具体任务理解工具输入、输出与调用约束。尝试使用 Blender MCP 连接自然语言指令与 Blender 操作，探索 AI 辅助三维内容制作，将工具使用与场景创作结合。', evidence: '实践：MCP 使用 · Blender MCP · 三维制作探索' },
   { title: 'AI 应用开发与效率工具', label: 'AI APPLICATION DEVELOPMENT', text: '参与 AI Agent 前端开发，实现 LLM 流式响应与 Function Calling 过程可视化，连接模型交互与业务界面。另开发 MySQL + IoTDB 跨数据库查询工具，简化设备测点查询与数据核对，将软件工程能力用于业务研发与效率优化。', evidence: '实践：流式交互 · 工具调用可视化 · 跨数据库查询' },
@@ -85,3 +245,4 @@ export const industrialWorks = [
 ]
 
 export const creatureWorks = [{ title: '倒生者', description: '以异生物观察室为主题的三维交互展示作品，通过标本全貌、头部与底层结构观察，以及行走状态展示，探索暗色场景氛围、生物造型与观察界面的结合。', displayUrl: 'https://v.douyin.com/uhQeo96xwIs/', displayLabel: '看抖音视频', images: [{src:'/images/reverse-molter/specimen.png',label:'完整标本'}, {src:'/images/reverse-molter/head.png',label:'头部细节'}, {src:'/images/reverse-molter/base.png',label:'底层结构'}, {src:'/images/reverse-molter/walking.png',label:'行走状态'}] }]
+
